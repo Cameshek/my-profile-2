@@ -51,7 +51,6 @@ body {
     position: relative;
 }
 
-/* Аватарка */
 .avatar-img {
     width: 110px;
     height: 110px;
@@ -156,6 +155,30 @@ body {
     transform: scale(1.1);
     background: linear-gradient(135deg, #522e6e, #7a3fa0);
     box-shadow: 0 0 16px rgba(255, 95, 176, 0.6);
+}
+
+/* ===== ХОЗЯЕВА ===== */
+.owners {
+    text-align: center;
+    font-size: 17px;
+    line-height: 2.2;
+    color: #ffb8e8;
+    letter-spacing: 1px;
+}
+
+.owners .name {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #3a2355, #522e6e);
+    border: 1px solid rgba(255, 150, 220, 0.4);
+    box-shadow: 0 0 14px rgba(255, 95, 176, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.owners .name:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 24px rgba(255, 95, 176, 0.8);
 }
 
 /* ===== СОЦСЕТИ ===== */
@@ -314,15 +337,10 @@ body {
 
 <div class="container">
     <header class="profile">
-
-        <!-- ============================================ -->
-        <!-- ВОТ ЗДЕСЬ АВАТАРКА. ЕСЛИ ФАЙЛ НАЗЫВАЕТСЯ -->
-        <!-- avatar.jpg — НИЧЕГО МЕНЯТЬ НЕ НУЖНО. -->
-        <!-- ЕСЛИ ДРУГОЕ ИМЯ — ПОМЕНЯЙ src НА СВОЁ. -->
-        <!-- ============================================ -->
+        <!-- АВАТАРКА -->
         <img class="avatar-img" src="avatar.jpg" alt="avatar">
 
-        <p class="tagline">геймер · программист · анимешник</p>
+        <p class="tagline">фембой · геймер · программист · анимешник</p>
         <p class="kaomoji-line">(* ^ ω ^) (´ ∀ ` *) (o^▽^o)</p>
         <div class="hearts">
             <button id="loveBtn" class="like-btn">
@@ -332,15 +350,17 @@ body {
     </header>
 
     <main class="board">
+        <!-- ОБО МНЕ -->
         <section class="card">
             <h2>🎀 Обо мне (◕‿◕)</h2>
             <p>
-                Привет! Если ты сюда попал — значит, тебе интересно было в моём профиле.
+                Привет! Я фембой (´｡• ω •｡`). Если ты сюда попал — значит, тебе интересно было в моём профиле.
                 Я не конфликтный и не люблю конфликты (─‿‿─).
-                Люблю атмосферные игры, аниме и код (´｡• ω •｡`).
+                Люблю атмосферные игры, аниме и код.
             </p>
         </section>
 
+        <!-- ИГРЫ -->
         <section class="card">
             <h2>🎮 Люблю игры (⌒▽⌒)☆</h2>
             <ul class="game-list">
@@ -353,6 +373,7 @@ body {
             </ul>
         </section>
 
+        <!-- УВЛЕЧЕНИЯ -->
         <section class="card">
             <h2>💻 Люблю делать ヽ(・∀・)ﾉ</h2>
             <ul class="skills-list">
@@ -361,6 +382,16 @@ body {
             </ul>
         </section>
 
+        <!-- ХОЗЯЕВА -->
+        <section class="card wide">
+            <h2>👑 Хозяева (◣_◢)</h2>
+            <div class="owners">
+                <span class="name">♱ awizz 雨が降る ♱</span><br>
+                <span class="name">🔥 жАрЕнЫй БоБеР 🔥</span>
+            </div>
+        </section>
+
+        <!-- КОНТАКТЫ -->
         <section class="card wide">
             <h2>💌 Если тебе это всё нравится (´｡• ᵕ •｡`)</h2>
             <p>
@@ -379,7 +410,7 @@ body {
         </section>
     </main>
 
-    <!-- СЧЁТЧИК ПОСЕЩЕНИЙ -->
+    <!-- СЧЁТЧИК -->
     <div class="visitor-counter">
         👀 Ты посетитель № <span id="visitCount">...</span>
     </div>
